@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset='utf-8'>
+  <title>Mymr test</title>
+  <script type="text/javascript" src='../js/mymr.js'></script>
+</head>
+<body>
+  <ol class='my-ol-list' type='dig-shan' reversed>
+    <li>Aung Aung</li>
+    <li>Maung Maung</li>
+    <li>Mya Mya</li>
+    <li>Hla Hla</li>
+    <li>Tun Tun</li>
+  </ol>
+  <ol class='my-ol-list' type='dig-my'>
+    <li>Aung Aung</li>
+    <li>
+      Maung Maung
+      <ol type='my' reversed>
+        <li>Aung Aung</li>
+        <li>Maung Maung</li>
+        <li>Mya Mya</li>
+        <li> Hla Hla
+          <ol type='dig-my' reversed>
+            <li>Aung Aung</li>
+            <li>Maung Maung</li>
+            <li>Mya Mya</li>
+            <li>Hla Hla</li>
+            <li>Tun Tun</li>
+          </ol>
+        </li>
+        <li>Tun Tun</li>
+      </ol>
+    </li>
+    <li>Mya Mya</li>
+    <li>Hla Hla</li>
+    <li>Tun Tun</li>
+  </ol>
+  <ol class='my-ol-list' type='shan'>
+    <li>Aung Aung</li>
+    <li>Maung Maung</li>
+    <li>Mya Mya</li>
+    <li>Hla Hla</li>
+    <li>Tun Tun</li>
+  </ol>
+
+  <script type="text/javascript">
+    var list = new mymr(document.getElementsByClassName('my-ol-list'));
+
+    // list.olGenerate();
+
+    mymr.justGo();
+
+  </script>
+</body>
+</html>
