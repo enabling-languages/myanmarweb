@@ -12,63 +12,20 @@
 
 var core_version = "1.0",
     
-    iso = {
-      "my": "myanmar",
-      "rki": "rakhine",
-      "tvn": "tavoyan",
-      "int": "intha",
-      "ksw": "sgawKaren",
-      "pwo": "westernPwoKaren",
-      "kjp": "easternPwoKaren",
-      "blk": "poaKaren",
-      "mnw": "mon",
-      "kyu": "kayah",
-      "csh": "ashoChin",
-      "shn": "shan",
-      "kht": "khamtiShan",
-      "aio": "aiton",
-      "phk": "phake",
-      "tle": "taiLaing",
-      "pll": "shwePalaung",
-      "pce": "palePalaung",
-      "rbb": "rumaiPalaung"
-    },
+    iso = {"my": "myanmar","rki": "rakhine","tvn": "tavoyan","int": "intha","ksw": "sgawKaren","pwo": "westernPwoKaren","kjp": "easternPwoKaren","blk": "poaKaren","mnw": "mon","kyu": "kayah","csh": "ashoChin","shn": "shan","kht": "khamtiShan","aio": "aiton","phk": "phake","tle": "taiLaing","pll": "shwePalaung","pce": "palePalaung","rbb": "rumaiPalaung"},
 
     langaugesList = [],
 
     characterMAP = {
       digits: {
-        myanmar: {
-        '0': '\u1040',
-        '1': '\u1041',
-        '2': '\u1042',
-        '3': '\u1043',
-        '4': '\u1044',
-        '5': '\u1045',
-        '6': '\u1046',
-        '7': '\u1047',
-        '8': '\u1048',
-        '9': '\u1049'
-        },
-        shan: {
-        '0': '\u1090',
-        '1': '\u1091',
-        '2': '\u1092',
-        '3': '\u1093',
-        '4': '\u1094',
-        '5': '\u1045',
-        '6': '\u1096',
-        '7': '\u1097',
-        '8': '\u1098',
-        '9': '\u1099'
-        }
+        myanmar: {'0': '\u1040','1': '\u1041','2': '\u1042','3': '\u1043','4': '\u1044','5': '\u1045','6': '\u1046','7': '\u1047','8': '\u1048','9': '\u1049'},
+        shan: {'0': '\u1090','1': '\u1091','2': '\u1092','3': '\u1093','4': '\u1094','5': '\u1045','6': '\u1096','7': '\u1097','8': '\u1098','9': '\u1099'}
       },
       consonants: {
         rakhine: ["က","ခ","ဂ","ဃ","င","စ","ဆ","ဇ","ဈ","ည","ဋ","ဌ","ဍ","ဎ","တ","ထ","ဒ","ဓ","န","ပ","ဖ","ဗ","ဘ","မ","ယ","ရ","လ","ဝ","သ","ဟ","ဠ","အ"],
         tavoyan: ["က","ခ","ဂ","ဃ","င","စ","ဆ","ဇ","ဈ","ည","ဋ","ဌ","ဍ","ဎ","တ","ထ","ဒ","ဓ","န","ပ","ဖ","ဗ","ဘ","မ","ယ","ရ","လ","ဝ","သ","ဟ","ဠ","အ"],
         intha: ["က","ခ","ဂ","ဃ","င","စ","ဆ","ဇ","ဈ","ည","ဋ","ဌ","ဍ","ဎ","တ","ထ","ဒ","ဓ","န","ပ","ဖ","ဗ","ဘ","မ","ယ","ရ","လ","ဝ","သ","ဟ","ဠ","အ"],
         myanmar: ["က","ခ","ဂ","ဃ","င","စ","ဆ","ဇ","ဈ","ည","ဋ","ဌ","ဍ","ဎ","တ","ထ","ဒ","ဓ","န","ပ","ဖ","ဗ","ဘ","မ","ယ","ရ","လ","ဝ","သ","ဟ","ဠ","အ"],
-
         mon: ["က","ခ","ဂ","ဃ","ၚ","စ","ဆ","ဇ","ၛ","ဉ","ည","ဋ","ဌ","ဍ","ဎ","ဏ","တ","ထ","ဒ","ဓ","န","ပ","ဖ","ဗ","ဘ","မ","ယ","ရ","လ","ဝ","သ","ဟ","ဠ","အ","ၜ","ၝ"],
         sgawKaren: ["က","ခ","ဂ","ဃ","င","စ","ဆ","ၡ","ည","တ","ထ","ဒ","န","ပ","ဖ","ဘ","မ","ယ","ရ","လ","ဝ","သ","ဟ","အ","ဧ"],
         westernPwoKaren: ["က","ခ","ဂ","ဎ","င","စ","ဆ","ဇ","ည","ၡ","တ","ထ","ဒ","န","ပ","ဖ","ဘ","မ","ယ","ရ","လ","ဝ","ၥ","ဟ","အ","ဧ","ၦ"],
@@ -78,14 +35,11 @@ var core_version = "1.0",
         ashoChin: ["က","ခ","ဂ","င","စ","ဆ","ဇ","ည","တ","ထ","ဒ","ဓ","န","ပ","ဖ","ဗ","ဘ","မ","ယ","ရ","ၡ","လ","ဝ","ဟ","အ","ဧ"],
         shan: ["ၵ","ၶ","ၷ","င","ၸ","သ","ၺ","ၹ","တ","ထ","ၻ","ၼ","ပ","ၽ","ၾ","ၿ","မ","ယ","ရ","လ","ဝ","ႀ","ႁ","ဢ"],
         khamtiShan: ["က","ၵ","ꩱ","ဂ","င","ꩡ","ꩢ","ꩣ","ꩤ","ꩥ","ꩦ","ꩧ","ꩨ","ꩩ","ၼ","တ","ထ","ၻ","ꩪ","ꩫ","ပ","ၸ","ၿ","ၹ","မ","ယ","ရ","လ","ဝ","ꩬ","ꩭ","ꩮ","ဢ","ꩯ","ႀ"],
-
         aiton: ["က","ၵ","င","ꩡ","ၺ","တ","ထ","ꩫ","ပ","ၸ","မ","ယ","ꩺ","လ","ဝ","ꩭ","ဢ"],
         phake: ["က","ၵ","င","ꩡ","ၺ","တ","ထ","ꩫ","ပ","ၸ","မ","ယ","ꩺ","လ","ဝ","ꩭ","ဢ"],
-
         // Under testing!
         taiLaing: ["က","ၵ","င","ၸ","ꩬ","ꧧ","တ","ထ","ꩫ","ပ","ꧤ","ꧨ","မ","ယ","ꩺ","လ","ဝ","ၯ","ဢ"],
         shwePalaung: ["1000","ခ","ꩾ","ဂ","င","စ","ဆ","ꩿ","ဇ","ဈ","ည","တ","ထ","ဒ","န","ပ","ဖ","ဘ","မ","ယ","ရ","လ","ဝ","ႎ","ႎှ","သ","ဟ","အ","ျ","ြ","ွ","ှ","္လ"],
-
         palePalaung: ["က","ခ","ဂ","င","စ","စှ","ဆ","ဇ","ည","တ","ထ","ဒ","န","ပ","ဖ","ဘ","မ","ယ","ရ","လ","ဝ","ဟ","အ","ဝှ"],
         rumaiPalaung: ["က","ခ","ဂ","င","စ","ဆ","ဇ","ည","တ","ထ","ဒ","န","ပ","ဖ","ဘ","မ","ယ","ရ","လ","ႎ","ဝ","ဟ","အ"]
       },
@@ -102,8 +56,7 @@ var core_version = "1.0",
                   "ol.mymrol.self>li:before{content: attr(li-value) ' '}";
 
   /**
-   * Featured cross-bowser function
-   *
+   * Cross-bowser functions
    */
   for(var abbr in iso) {
     langaugesList.push(abbr);
@@ -135,7 +88,6 @@ var core_version = "1.0",
 
   /**
    * Word Breaker Function
-   *
    * @param {String} Content text to add work break points
    * @param {String} Language type to work out
    * @return {String} Edited content text
@@ -143,9 +95,7 @@ var core_version = "1.0",
   function wordBreaker(content, langauge){
     
     langauge = iso[langauge] || langauge;
-
     switch(langauge){
-
       case "my":
       case "rki":
       case "tvn":
@@ -168,10 +118,8 @@ var core_version = "1.0",
 
       case "pwo":
         break;
-
       case "kjp":
         break;
-
       case "blk":
         break;
 
@@ -186,7 +134,6 @@ var core_version = "1.0",
 
       case "kyu":
         break;
-
       case "csh":
         break;
 
@@ -208,24 +155,18 @@ var core_version = "1.0",
       case "aio":
       case "phk":
         break;
-
       case "tle":
         break;
-
       case "pll":
         break;
-
       case "pce":
         break;
-
       case "rbb":
         break;
-
       default:
         content = content.replace(/(\u103A)(\u1037)/g, '$2$1');
         break;
     }
-
     return content;
   }
 
@@ -241,9 +182,8 @@ var core_version = "1.0",
     content = content+[];
     var map = characterMAP.digits[langauge];
     
-    function rpl(match, d){
-      return map[d];
-    }
+    // Replacer
+    function rpl(match, d){ return map[d]; }
     
     if(map) return content.replace(/([\d])/g, rpl);
     else return content;
@@ -267,9 +207,7 @@ var core_version = "1.0",
       _res = map[_que-1] + _res;
       number = (number-_que)/len;
     }
-
     return _res;
-
   }
 
   function collectionOlGenerate(collection, option){
@@ -294,7 +232,6 @@ var core_version = "1.0",
   function olGenerate(ol, option){
 
     option = option || {};
-
     if (ol.mymrol && !option.force) return;
 
     var start = option.start || parseInt(attr(ol, 'start')) || 0,
@@ -303,7 +240,7 @@ var core_version = "1.0",
         dig = type.match(/^dig-/),
         langauge = type.match(/^(?:dig-)*(\w*)$/)[1],
         lis = getChildByTagName(ol, 'li'),
-        affix = option.affix || "parens",
+        affix = option.affix || ["",""],
         i = 0, j = lis.length, c;
 
     langauge = iso[langauge] || langauge;
@@ -313,12 +250,11 @@ var core_version = "1.0",
       collectionOlGenerate(getChildByTagName(lis[i], 'ol'), option);
       c = reversed !== null ? j : i+start+1;
 
-      if(dig) attr(lis[i], 'li-value', digitsConverter(c,langauge));
-      else attr(lis[i], 'li-value', consonantsConverter(c, langauge));
+      if(dig) attr(lis[i], 'li-value', affix[0] + digitsConverter(c,langauge) + affix[1]);
+      else attr(lis[i], 'li-value', affix[0] + consonantsConverter(c, langauge) + affix[1]);
     }
     
     ol.mymrol = "isGenerated";
-
   }
 
   /**
@@ -329,16 +265,11 @@ var core_version = "1.0",
     
     langauge = iso[langauge] || langauge;
     var regexp, match;
-
     if ((regexp = characterMAP.firstLetter[langauge])) {
       match = elem.innerHTML.match(regexp);
-
-      if( match ) {
+      if(match)
         attr(elem, 'data-mymrfl', match[0]);
-      }
-
     }
-
   }
 
   /** Under testing....
@@ -377,13 +308,23 @@ var core_version = "1.0",
   mymr.olGenerate = olGenerate;
   mymr.firstLetter = firstLetter;
 
-  mymr.justGo = function(){
+  // Affix support within option
+  mymr.justGo = function(option){
     var fls = document.getElementsByTagName("");
     var ols = document.getElementsByTagName("ol");
     for (var i = 0; i < ols.length; i++) {
-      if(matchOL(ols[i])){
-        mymr.olGenerate(ols[i]);
-        attr(ols[i], 'class', attr(ols[i], 'class') + " mymrol parens");
+      var ol = ols[i];
+      var parens = "parens";
+      var affix = option.affix;
+      if(matchOL(ol)){
+        if(affix = attr(ol, 'data-affix')){
+          mymr.olGenerate(ol, {affix: affix.split("x")});
+          parens = "self";
+        }else{
+          mymr.olGenerate(ol);
+        }
+        
+        attr(ol, 'class', attr(ol, 'class') + " mymrol " + parens);
       }
     }
   }
