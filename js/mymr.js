@@ -240,7 +240,7 @@ var core_version = "1.0",
         dig = type.match(/^dig-/),
         langauge = type.match(/^(?:dig-)*(\w*)$/)[1],
         lis = getChildByTagName(ol, 'li'),
-        affix = option.affix || ["",""],
+        affix = (attr(ol, 'data-affix')&&attr(ol, 'data-affix').split("x")) || option.affix || ["",""],
         i = 0, j = lis.length, c;
 
     langauge = iso[langauge] || langauge;
@@ -281,7 +281,7 @@ var core_version = "1.0",
   }
 
   /**
-   * MYMR Core function
+   * MYMR Constructor
    * *This is just a selector
    * Single DOM node or element collection is accepted
    */
@@ -315,15 +315,14 @@ var core_version = "1.0",
     for (var i = 0; i < ols.length; i++) {
       var ol = ols[i];
       var parens = "parens";
-      var affix = option.affix;
+      var affix = option&&option.affix;
       if(matchOL(ol)){
         if(affix = attr(ol, 'data-affix')){
-          mymr.olGenerate(ol, {affix: affix.split("x")});
+          mymr.olGenerate(ol);
           parens = "self";
         }else{
           mymr.olGenerate(ol);
         }
-        
         attr(ol, 'class', attr(ol, 'class') + " mymrol " + parens);
       }
     }
@@ -339,15 +338,15 @@ var core_version = "1.0",
         fn.apply(this[i]);
       }
     },
-    olGenerate: function(){
+    olGenerate: function(option){
       this.each(function(){
-        mymr.olGenerate(this);
+        mymr.olGenerate(this, option);
       });
       return this;
     },
-    firstLetter: function(){
+    firstLetter: function(lang){
       this.each(function(){
-        mymr.firstLetter(this);
+        mymr.firstLetter(this, lang);
       });
       return this;
     }
