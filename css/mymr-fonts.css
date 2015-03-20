@@ -17,15 +17,20 @@
  */
 
 :lang(ksw), :lang(pwo) {
-  font-language-override: "ksw";                            /* Padauk  */
-  -ms-font-feature-settings: "locl";                        /* Padauk  */
-  font-feature-settings: "hsln", "wtri", "lldt", "locl";    /* Padauk  */
+  font-language-override: "ksw";                            /* Padauk, Noto Sans Myanmar  */
+  -ms-font-feature-settings: "locl";                        /* Padauk, Noto Sans Myanmar  */
+  font-feature-settings: "hsln", "wtri", "lldt", "locl";    /* Padauk, Noto Sans Myanmar (only locl supported)  */
 }
 
 :lang(kht) {
     font-language-override: "kht";                          /* Padauk  */
     -ms-font-feature-settings: "locl";                      /* Padauk  */
     font-feature-settings: "kdot", "fdot", "locl";          /* Padauk  */
+
+:lang(kyu) {                 
+    font-language-override: "kyu";                          /* Padauk  */
+    -ms-font-feature-settings: "locl";                      /* Padauk  */
+    font-feature-settings: "wtri", "hsln" 2, "locl";        /* Padauk  */
 }
 
 
@@ -42,6 +47,8 @@ html {
  *    Enable localised forms for IE
  *
  *    letter-spacing values not equal to 0, will disable liga and clig features in myme style fonts, breaking rendering.
+ *
+ *    These rules are needed for Padauk and Tharlon, but are not required for Myanmar Sans Pro and Noto Sans Myanmar
  */
 html, body, * {
   -webkit-font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
@@ -49,6 +56,13 @@ html, body, * {
   -moz-font-feature-settings:  "kern" 1, "liga" 1, "clig" 1;
   font-feature-settings:  "kern" 1, "liga" 1, "clig" 1, "locl";
 }
+
+
+/*
+ * Other rules
+ *
+ *
+ */
 
 code,
 kbd {

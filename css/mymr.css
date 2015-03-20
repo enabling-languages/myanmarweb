@@ -5,7 +5,10 @@
 /*
  * Myanmar overrides
  *
- *
+ * ordered lists use numeric markers.
+ * To use alphabtic markers, use
+ * <ol class="alpha">git push origin
+ * 
  *
  */
 
