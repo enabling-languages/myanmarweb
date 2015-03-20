@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/*
+ * Myanmar webfonts
+ * - adjust webfont @import rule to match desired fonts, and
+ *   adjust graphite/opentype rules to match font
+ */
+
+/* @import url(http://fonts.googleapis.com/earlyaccess/myanmarsanspro.css); */
+/* @import url(http://fonts.googleapis.com/earlyaccess/notosansmyanmar.css); */
+@import url(http://fonts.googleapis.com/earlyaccess/padauk.css);
+/* @import url(http://fonts.googleapis.com/earlyaccess/tharlon.css); */
+
+/*
+ * Language specific Graphite and OpenType support
+ *
+ */
+
+:lang(ksw), :lang(pwo) {
+  font-language-override: "ksw";                            /* Padauk  */
+  -ms-font-feature-settings: "locl";                        /* Padauk  */
+  font-feature-settings: "hsln", "wtri", "lldt", "locl";    /* Padauk  */
+}
+
+:lang(kht) {
+    font-language-override: "kht";                          /* Padauk  */
+    -ms-font-feature-settings: "locl";                      /* Padauk  */
+    font-feature-settings: "kdot", "fdot", "locl";          /* Padauk  */
+}
+
+
+html {
+  /* Adjust font stack to match webfonts being used  */  
+  font-family: "Myanmar MN","Myanmar Sangam MN",Padauk,Tharlon,"Myanmar Text",sans-serif;
+  -ms-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
+}
+
+/*! Adapted from normalize-opentype v0.1.1 | MIT License | kennethormandy.com/journal/normalize-opentype-css */
+/**
+ * 1. Turn on kerning, standard ligatures, and contextual ligatures.
+ *    Enable localised forms for IE
+ *
+ *    letter-spacing values not equal to 0, will disable liga and clig features in myme style fonts, breaking rendering.
+ */
+html, body, * {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
+  -ms-font-feature-settings:  "kern" 1, "liga" 1, "clig" 1, "locl";
+  -moz-font-feature-settings:  "kern" 1, "liga" 1, "clig" 1;
+  font-feature-settings:  "kern" 1, "liga" 1, "clig" 1, "locl";
+}
+
+code,
+kbd {
+  font-family: monospace;
+}
+
+pre,
+samp,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit; 
+}
+
+
+
+
+/*
+ *
+ *
+ *
+
+-webkit-font-feature-settings: ;
+-ms-font-feature-settings: "locl";
+font-feature-settings: "locl";
+ 
+
+@font-face
+@import
+
+
+
+unicode-range
+font-language-override
+font-feature-settings
+font-size-adjust
+
+
+*/
+
+
+
