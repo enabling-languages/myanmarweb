@@ -47,7 +47,7 @@ html {
  *    Enable localised forms for IE
  *
  *    letter-spacing values not equal to 0, will disable liga and clig features in myme style fonts, breaking rendering.
- *
+ *          
  *    These rules are needed for Padauk and Tharlon, but are not required for Myanmar Sans Pro and Noto Sans Myanmar
  */
 html, body, * {
@@ -59,7 +59,7 @@ html, body, * {
 
 
 /*
- * Other rules
+ * Other rules      
  *
  *
  */
