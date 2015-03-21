@@ -33,7 +33,6 @@
     font-feature-settings: "wtri", "hsln" 2, "locl";        /* Padauk  */
 }
 
-
 html {
   /* Adjust font stack to match webfonts being used  */  
   font-family: "Myanmar MN","Myanmar Sangam MN",Padauk,Tharlon,"Myanmar Text",sans-serif;
@@ -57,7 +56,6 @@ html, body, * {
   font-feature-settings:  "kern" 1, "liga" 1, "clig" 1, "locl";
 }
 
-
 /*
  * Other rules      
  *
@@ -65,12 +63,13 @@ html, body, * {
  */
 
 code,
-kbd {
+kbd,
+samp,
+tt {
   font-family: monospace;
 }
 
 pre,
-samp,
 button,
 input,
 optgroup,
@@ -78,7 +77,6 @@ select,
 textarea {
   font: inherit; 
 }
-
 
 
 

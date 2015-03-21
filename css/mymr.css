@@ -54,7 +54,7 @@ ol.alpha:lang(shn) {
 
 
 /*
- * Italic and emphasis overrides
+ * Italic style overrides
  *
  */
 
@@ -69,7 +69,7 @@ em:lang(en), i:lang(en) {
     text-decoration: none;
 }
 
-
+cite, var, address, dfn {}
 
 /*
  *
