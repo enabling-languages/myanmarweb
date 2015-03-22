@@ -41,7 +41,9 @@ ol.alpha:lang(my) {
     list-style: burmese-consonant;
 }
 
-ol.alpha:lang(my) ol.alpha:lang(my) {  }
+ol.alpha:lang(my) ol.alpha:lang(my) { 
+    list-style: burmese-consonant-double;
+}
 
 ol.alpha:lang(mnw) {
     list-style: mon-consonant;
