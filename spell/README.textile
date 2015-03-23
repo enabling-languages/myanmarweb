@@ -1,0 +1,12 @@
+h1. Spell checking files
+
+Hunspell files for Burmese developed by Keith Stribley (ThanLwinSoft) as part of a Myanmar line breaking and spellchecking extension for OpenOffice.org. (https://github.com/thanlwinsoft/myoooext).
+
+The openoffice extension used a combination of a Myanmar Syllable algorithm and a spellcheck dictionary to identify Myanmar words within a paragraph of text even if there are no spaces between the words. This information is then use to line break without needing a space and for spell-checking.
+
+The word list was derived from Dr Judson's Myanmar-Engish dictionary, which was last revised in 1918, so some updates have been made to spellings. There will also be new words which have entered the Myanmar language since then.
+
+The intention is to develop the spellchecker as a Firefox extension and to implement it as a javascript based spellchecker.
+
+If you find common Myanmar words, which are being wrongly identified by this extension please report the issue at https://github.com/enabling-languages/myanmarweb/issues
+
