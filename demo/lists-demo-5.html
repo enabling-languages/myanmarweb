@@ -13,20 +13,21 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>MyanmarWeb - lists demo 1</title>
+    <title>MyanmarWeb - lists demo 5</title>
     <style>
     @import url(http://fonts.googleapis.com/earlyaccess/padauk.css);
-    @counter-style myanmar-parens {
-      system: numeric;
-      symbols: '\1040' '\1041' '\1042' '\1043' '\1044' '\1045' '\1046' '\1047' '\1048' '\1049';
-      /* symbols: '၀' '၁' '၂' '၃' '၄' '၅' '၆' '၇' '၈' '၉'; */
-      prefix: "(";
-      suffix: ") ";
+    
+    @counter-style dash {
+      system: cyclic;
+      symbols: \2013;
+      /* – */
+      suffix: " ";
     }
+
     :lang(my) {font-family Padauk, Tharlon, sans-serif;}
-    ol {
-      list-style: myanmar; 
-      list-style: myanmar-parens;
+
+    ul {
+      list-style: dash; 
       margin-bottom: 0px;
       padding-left: 3em;
     }
@@ -46,7 +47,7 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h2>
-<a id="myanmar-lists-documentation" class="anchor" href="#myanmar-lists-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists demo 1</h2>
+<a id="myanmar-lists-documentation" class="anchor" href="#myanmar-lists-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists demo 5</h2>
 
 
 
@@ -54,11 +55,11 @@
 
 
 <p><strong>Expected behaviour:</strong> List markers are Myanmar digits.</p>
-<ol>
+<ul>
 <li>Arabic &ndash; <span lang="my">အာရေဗီ</span>
-    <ol>
+    <ul>
         <li>Modern Standard Arabic &ndash; <span lang="my">အရေဗီ(ပုံမှန်)</span></li>
-    </ol>
+    </ul>
 </li>
 <li>Abkhazian &ndash; <span lang="my">အက်ခါဇူအနျ</span></li>
 <li>Afrikaans &ndash; <span lang="my">အာဖရိကန်းစ်</span></li>
@@ -79,10 +80,10 @@
 <li>Chechen &ndash; <span lang="my">ချေချင်း</span></li>
 <li>Cherokee &ndash; <span lang="my">ချာရိုကီ</span></li>
 <li>Chinese &ndash; <span lang="my">တရုတ်</span>
-    <ol>
+    <ul>
         <li>Simplified Chinese &ndash; <span lang="my">ရိုးရှင်းသော တရုတ်</span></li>
         <li>Traditional Chinese &ndash; <span lang="my">ရှေးရိုးစဉ်လာ တရုတ်</span></li>
-    </ol>
+    </ul>
 </li>
 <li>Cree &ndash; <span lang="my">ခရီး</span></li>
 <li>Croatian &ndash; <span lang="my">ခရိုအေရှန်</span></li>
@@ -94,14 +95,14 @@
 <li>Dzongkha &ndash; <span lang="my">ဒွန်ကာ</span></li>
 <li>Eastern Frisian &ndash; <span lang="my">အရှေ့ပိုင်း ဖရီစီရန်</span></li>
 <li>English &ndash; <span lang="my">အင်္ဂလိပ်</span>
-    <ol>
+    <ul>
         <li>American English &ndash; <span lang="my">အမေရိကန် အင်္ဂလိပ်</span></li>
         <li>Australian English &ndash; <span lang="my">ဩစတြေးလျှ အင်္ဂလိပ်</span></li>
         <li>British English &ndash; <span lang="my">ဗြိတိသျှ အင်္ဂလိပ်</span></li>
         <li>Canadian English &ndash; <span lang="my">ကနေဒါ အင်္ဂလိပ်</span></li>
         <li>U.K. English &ndash; <span lang="my">အင်္ဂလိပ်(ယူကေ)</span></li>
         <li>U.S. English &ndash; <span lang="my">အင်္ဂလိပ်(ယူအက်စ်)</span></li>
-    </ol>
+    </ul>
 </li>
 <li>Esperanto &ndash; <span lang="my">အက္စပရန္တို</span></li>
 <li>Estonian &ndash; <span lang="my">အက်စ်တိုးနီးရန်း</span></li>
@@ -111,18 +112,18 @@
 <li>Finnish &ndash; <span lang="my">ဖင်နစ်ရှ်</span></li>
 <li>Flemish &ndash; <span lang="my">ဖလီမစ်ရှ်</span></li>
 <li>French &ndash; <span lang="my">ပြင်သစ်</span>
-    <ol>
+    <ul>
         <li>Canadian French &ndash; <span lang="my">ကနေဒါ ပြင်သစ်</span></li>
         <li>Swiss French &ndash; <span lang="my">ဆွစ် ပြင်သစ်</span></li>
-    </ol>
+    </ul>
 </li>
 <li>Galician &ndash; <span lang="my">ဂါလာစီယံ</span></li>
 <li>Georgian &ndash; <span lang="my">ဂျော်ဂျီယန်</span></li>
 <li>German &ndash; <span lang="my">ဂျာမန်</span>
-    <ol>
+    <ul>
         <li>Swiss German &ndash; <span lang="my">ဆွစ် ဂျာမန်</span></li>
         <li>Austrian German &ndash; <span lang="my">ဩစတြီးယ ဂျာမန်</span></li>
-    </ol>
+    </ul>
 </li>
 <li>Guarani &ndash; <span lang="my">ဂူအာရာနီ</span></li>
 <li>Gujarati &ndash; <span lang="my">ဂူဂျာရသီ</span></li>
@@ -166,10 +167,10 @@
 <li>Nepali &ndash; <span lang="my">နီပါလီ</span></li>
 <li>Northern Frisian &ndash; <span lang="my">မြောက်ပိုင်း ဖရီစီရန်</span></li>
 <li>Norwegian &ndash; <span lang="my">နော်ဝေး</span>
-    <ol>
+    <ul>
         <li>Norwegian Bokmål &ndash; <span lang="my">ဘွတ်မော်လ်</span></li>
         <li>Norwegian Nynorsk &ndash; <span lang="my">နော်ဝေး နီးနော်စ်ခ်</span></li>
-    </ol>    
+    </ul>    
 </li>
 <li>Oriya &ndash; <span lang="my">အိုရီရာ</span></li>
 <li>Pali &ndash; <span lang="my">ပါဠိ</span></li>
@@ -177,9 +178,9 @@
 <li>Persian &ndash; <span lang="my">ပါရှန်</span></li>
 <li>Polish &ndash; <span lang="my">ပိုလန်</span></li>
 <li>Portuguese &ndash; <span lang="my">ပေါ်တူဂီ</span>
-    <ol>
+    <ul>
         <li>Brazilian Portuguese &ndash; <span lang="my">ဘရာဇီး ပေါ်တူဂီ</span></li>
-    </ol>
+    </ul>
 </li>
 <li>Punjabi &ndash; <span lang="my">ပန်ချာပီ</span></li>
 <li>Quechua &ndash; <span lang="my">ခက်ချ်ဝါ</span></li>
@@ -198,10 +199,10 @@
 <li>Somali &ndash; <span lang="my">ဆိုမာလီ</span></li>
 <li>Southern Sami &ndash; <span lang="my">တောင်ပိုင်း ဆာမိ</span></li>
 <li>Spanish &ndash; <span lang="my">စပိန်</span>
-    <ol>
+    <ul>
         <li>European Spanish &ndash; <span lang="my">စပိန်(ဥရောပ)</span></li>
         <li>Latin American Spanish &ndash; <span lang="my">လက်တင်အမေရိက စပိန်</span></li>
-    </ol>
+    </ul>
 </li>
 <li>Standard Moroccan Tamazight &ndash; <span lang="my">မိုရိုကန် တွမ်မဇိုတ် စံ</span></li>
 <li>Sundanese &ndash; <span lang="my">ဆူဒန်</span></li>
@@ -228,7 +229,7 @@
 <li>Xhosa &ndash; <span lang="my">ဇိုစာ</span></li>
 <li>Yoruba &ndash; <span lang="my">ရိုရုဘာ</span></li>
 <li>Zulu &ndash; <span lang="my">ဇူလူ</span></li>   
-</ol>
+</ul>
 
 
 
