@@ -28,8 +28,8 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h1>
-<a id="myanmar-lists-documentation" class="anchor" href="#myanmar-lists-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Myanmar script lists and generated counters</h1>
+          <h2>
+<a id="myanmar-lists-documentation" class="anchor" href="#myanmar-lists-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Myanmar script lists and generated counters</h2>
 
 
 
@@ -39,7 +39,7 @@
 
 <p>It is necessary to use the CSS cascade to provide appropriate fallbacks when you extend a predefined list type.</p>
 
-<h2>Numerical ordered lists</h2>
+<h3>Numerical ordered lists</h3>
 
 <p>The default <code>myanmar</code> list type follows the formating of European lists. Inserting a period at the end of the decimal list marker. An alternative, that is more appropriate for Burmese content, is to place the decimal list marker within parentheses. Using the <code>@counter-style</code> to extend the <code>myanmar</code> list type:</p>
 
@@ -66,7 +66,7 @@ ol {
 
 <p>See <a href="demo/lists-demo-1.html">demo 1</a></p>
 
-<h2>Alphabetic ordered lists</h2>
+<h3>Alphabetic ordered lists</h3>
 
 <p>It is possible to contruct alphabetic list type for each language you need to support. A definition for a Burmese alphabetic list type:</p>
 
@@ -91,9 +91,9 @@ ol.alpha {
 
 <p>See <a href="demo/lists-demo-2.html">demo 2</a></p>
 
-<h2>Mixing list types</h2>
+<h3>Mixing list types</h3>
 
-<h3>Alternating numeric and alphabetic nested lists</h3>
+<h4>Alternating numeric and alphabetic nested lists</h4>
 
 <p>It is possible to alternate list types:</p>
 
@@ -116,7 +116,7 @@ ol ol ol {
 
 <p>See <a href="demo/lists-demo-3.html">demo 3</a></p>
 
-<h3>Alphabetic nested lists</h3>
+<h4>Alphabetic nested lists</h4>
 
 <pre><code class="css">
 @counter-style burmese-consonant-dbl {
@@ -147,7 +147,7 @@ ol ol ol {
 
 <p>See <a href="demo/lists-demo-4.html">demo 4</a></p>
 
-<h2>Unordered lists</h2>
+<h3>Unordered lists</h3>
 
 <p>It is possible to define a list type that uses a hyphen or an en-dash for the marker:</p>
 
@@ -176,7 +176,7 @@ ul {
 
 <p>See <a href="demo/lists-demo-5.html">demo 5</a></p>
 
-<h2>Numeric headings</h2>
+<h3>Numeric headings</h3>
 
 <p>It is possible to automatically number headings and subheadings. The CSS could look like:</p>
 
