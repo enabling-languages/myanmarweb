@@ -50,11 +50,33 @@
 <a id="myanmar-lists-documentation" class="anchor" href="#myanmar-lists-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists demo 5</h2>
 
 
+<p><strong>Sample code:</strong></p>
+<pre><code>
+  
+    @counter-style dash {
+      system: cyclic;
+      symbols: \2013;
+      /* – */
+      suffix: " ";
+    }
+    
+    @counter-style hyphen {
+      system: cyclic;
+      symbols: "-";
+      suffix: " ";
+    }
+    
+    :lang(my) {font-family Padauk, Tharlon, sans-serif;}
 
+    ul {
+      list-style: dash; 
+      margin-bottom: 0px;
+      padding-left: 3em;
+    }
 
+</code></pre>
 
-
-<p><strong>Expected behaviour:</strong> List markers are Myanmar digits.</p>
+<p><strong>Expected behaviour:</strong> List markers are "Dash, child li "hyphen</p>
 <ul>
 <li>Arabic &ndash; <span lang="my">အာရေဗီ</span>
     <ul>

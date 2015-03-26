@@ -68,7 +68,43 @@
         <section id="main-content">
           <h2>
 <a id="myanmar-lists-documentation" class="anchor" href="#myanmar-lists-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists demo 6</h2>
+<p><strong>Sample code:</strong></p>
+<pre><code>
+    #main-content h1:lang(my):before {
+            content: counter(chapt, myanmar) "။" ;
+            padding-right: 0.5em;
+            color: #000000;
+    }
+    
+    #main-content h1:lang(my) {
+            counter-increment: chapt;
+            counter-reset: section;
+    }
+   
+    #main-content h2:lang(my):before {
+            content: counter(chapt, myanmar) "." counter(section, myanmar) "။" ;
+            padding-right: 0.5em;
+            color: #000000;
+    }
+    
+    #main-content h2:lang(my) {
+            counter-increment: section;
+            margin: 1.0em;
+    }
 
+    #main-content h3:lang(my):before {
+            content: counter(chapt, myanmar) "." counter(section, myanmar) "." counter(subsection, myanmar) "။" ;
+            padding-right: 0.5em;
+            color: #000000;
+    }
+    
+    #main-content h3:lang(my) {
+            counter-increment: subsection;
+            margin: 1.0em;
+    }
+
+    :lang(my) {font-family Padauk, Tharlon, sans-serif;}
+</code></pre>
 
 <div lang="my">
 <h1>အင်္ဂလိပ်</h1>
