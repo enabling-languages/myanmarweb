@@ -44,12 +44,27 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h2>
-<a id="myanmar-lists-documentation" class="anchor" href="#myanmar-lists-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists demo 1a</h2>
+            <a id="myanmar-lists-documentation" class="anchor" href="#myanmar-lists-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists demo 1a
+          </h2>
 
 
 
 
 
+<p><strong>Sample Code:</strong></p>
+<pre><code class="css">
+@counter-style myanmar-parens {
+    system: extends myanmar; 
+    prefix: "("; 
+    suffix: ") "; 
+}
+
+// ** extend the defined myanmar-parens
+ol {
+    list-style: myanmar; 
+    list-style: myanmar-parens;
+}
+</code></pre>
 
 <p><strong>Expected behaviour:</strong> List markers are Myanmar digits.</p>
 <ol>
