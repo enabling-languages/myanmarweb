@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <style type="text/css">
+        body {font-family:Padauk, Tharlon;}
+        h1:before {
+            content: counter(chapt, -moz-myanmar) "။" ;
+            content: counter(chapt, myanmar) "။" ;
+            padding-right: 0.5em;
+        }
+        h1 {
+            counter-increment: chapt;
+            counter-reset: section;
+        }
+        h2:before {
+            content: counter(chapt, -moz-myanmar) "." counter(section, -moz-myanmar) "။" ;
+            content: counter(chapt, myanmar) "." counter(section, myanmar) "။" ;
+            padding-right: 0.5em;
+        }
+        h2 {
+            counter-increment: section;
+            margin: 1.0em;
+        }
+
+
+        h3:before {
+            content: counter(chapt, -moz-myanmar) "." counter(section, -moz-myanmar) "." counter(subsection, -moz-myanmar) "။" ;
+            content: counter(chapt, myanmar) "." counter(section, myanmar) "." counter(subsection, myanmar) "။" ;
+            padding-right: 0.5em;
+        }
+        h3 {
+            counter-increment: subsection;
+            margin: 1.0em;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>အင်္ဂလိပ်</h1>
+<h2>ဩစတြေးလျှ အင်္ဂလိပ်</h2>
+   <h2>ကနေဒါ အင်္ဂလိပ်</h2>
+  <h2>ဗြိတိသျှ အင်္ဂလိပ်</h2>
+<h1>ကိုးရီးယား</h1>
+<h1>တရုတ်</h1>
+</body>
+</html>
