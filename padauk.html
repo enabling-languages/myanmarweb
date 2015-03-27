@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>MyanmarWeb by enabling-languages</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>MyanmarWeb</h1>
+        <h2>Tools and resources for Myanmar Web development</h2>
+        <a href="https://github.com/enabling-languages/myanmarweb" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>
+<a id="myanmar-lists-documentation" class="anchor" href="#myanmar-lists-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Myanmar script lists and generated counters</h3>
+
+
+
+
+
+
+<h2 id="padauk_and_padauk_book">Padauk and Padauk Book</h2>
+
+
+<p>
+<a rel="nofollow" title="http://scripts.sil.org/Padauk" class="urlextern" href="http://scripts.sil.org/Padauk">Paduak</a> and <a rel="nofollow" title="http://scripts.sil.org/Padauk" class="urlextern" href="http://scripts.sil.org/Padauk">Paduak Book</a> are TT fonts with OpenType and Graphite tables for the Myanmar script. 
+</p>
+
+<p>
+These notes refer to v. 2.8
+</p>
+
+
+
+<h3 id="graphite" class="sectionedit2">Graphite</h3>
+
+
+<h4 id="graphite_features">Graphite features</h4>
+
+<table class="inline">
+  <tbody><tr class="row0">
+    <th class="col0 leftalign">Feature  </th><th class="col1 leftalign">id  </th><th class="col2 leftalign">Desc. </th><th class="col3 leftalign">Default </th><th class="col4 leftalign">Other values  </th>
+  </tr>
+  <tr class="row1">
+    <th class="col0 leftalign">khamti </th><td class="col1 leftalign">kdot  </td><td class="col2 leftalign">Khamti style dots </td><td class="col3 leftalign">0 </td><td class="col4 leftalign">  </td>
+  </tr>
+  <tr class="row2">
+    <th class="col0 leftalign">filled </th><td class="col1 leftalign">fdot  </td><td class="col2 leftalign">Filled dots </td><td class="col3 leftalign">0 </td><td class="col4 leftalign">  </td>
+  </tr>
+  <tr class="row3">
+    <th class="col0 leftalign">lldot  </th><td class="col1 leftalign">lldt  </td><td class="col2 leftalign">Lower dot shifts left </td><td class="col3 leftalign">0 </td><td class="col4 leftalign">  </td>
+  </tr>
+  <tr class="row4">
+    <th class="col0 leftalign">watri  </th><td class="col1 leftalign">wtri  </td><td class="col2 leftalign">Tear drop style washwe  </td><td class="col3 leftalign">0 </td><td class="col4 leftalign">  </td>
+  </tr>
+  <tr class="row5">
+    <th class="col0 leftalign">uLong  </th><td class="col1 leftalign">ulon  </td><td class="col2 leftalign">Long U with Yayit, long UU with Hato  </td><td class="col3 leftalign">0 </td><td class="col4 leftalign">  </td>
+  </tr>
+  <tr class="row6">
+    <th class="col0 leftalign">uTall  </th><td class="col1 leftalign">utal  </td><td class="col2 leftalign">U and UU always full height </td><td class="col3 leftalign">0 </td><td class="col4 leftalign">  </td>
+  </tr>
+  <tr class="row7">
+    <th class="col0 leftalign">dottedc  </th><td class="col1 leftalign">dotc  </td><td class="col2 leftalign">Insert dotted circles for errors  </td><td class="col3 leftalign">1 </td><td class="col4 leftalign">  </td>
+  </tr>
+  <tr class="row8">
+    <th class="col0 leftalign">slanth </th><td class="col1 leftalign">hsln  </td><td class="col2 leftalign">Slanted hato  </td><td class="col3 leftalign">none  </td><td class="col4 leftalign">0=Upright <br>
+1=Sgaw style slanted leg with horizontal foot <br>
+2=Slanted leg with right angled foot  </td>
+  </tr>
+  <tr class="row9">
+    <th class="col0 leftalign">nnya </th><td class="col1 leftalign">nnya  </td><td class="col2 leftalign">Disable great nnya  </td><td class="col3 leftalign">0 </td><td class="col4 leftalign">  </td>
+  </tr>
+  <tr class="row10">
+    <th class="col0">vartta </th><td class="col1 leftalign">vtta   </td><td class="col2 leftalign">Variant tta            </td><td class="col3 leftalign">0      </td><td class="col4 leftalign">  </td>
+  </tr>
+</tbody></table>
+
+
+
+<h4 id="default_features_per_language">Default features per language</h5>
+
+
+<h5 id="s_gaw_karen_ksw">S'gaw Karen (ksw)</h5>
+
+<pre class="code">  slanth = 1;
+  watri = 1;
+  lldot = 1;</pre>
+
+<h5 id="khmati_kht">Khmati (kht)</h5>
+
+<pre class="code">  khamti = 1;
+  filled = 1;</pre>
+
+
+
+<h5 id="kayah_kyu">Kayah (kyu)</h5>
+
+<pre class="code">  watri = 1;
+  slanth = 2;</pre>
+
+
+
+
+
+
+
+<h3 id="opentype">Opentype</h3>
+
+<p>Padauk uses the clig, kern, mark, mkmk and locl Opentype features.</p>
+
+<p>It contains support the following language systems: dftl (Default), kht (Khamti Shan), ksw (Sgaw Karen), kyu (). </p>
+
+
+<h3>CSS rules</h3>
+
+
+
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/enabling-languages/myanmarweb/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/enabling-languages/myanmarweb/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/enabling-languages/myanmarweb"></a> is maintained by <a href="https://github.com/enabling-languages">enabling-languages</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
