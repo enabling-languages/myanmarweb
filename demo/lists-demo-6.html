@@ -102,8 +102,9 @@
             counter-increment: subsection;
             margin: 1.0em;
     }
-
-    #main-content h1, #main-content h2, #main-content h3, :lang(my) {font-family Padauk, Tharlon, sans-serif;}
+    
+    /* overrides */
+    #main-content h1:lang(my), #main-content h2:lang(my), #main-content h3:lang(my), :lang(my) {font-family Padauk, Tharlon, sans-serif;}
 </code></pre>
 <p><strong>Expected behaviour:</strong> Header(h1...6) are prefixed with "Burmese Digits.</p>
 
