@@ -155,6 +155,18 @@ These notes refer to v. 2.8
 
 </code></pre>
 
+<p>Padauk and Padauk Book support the Opentype script <code>mymr</code>, rather than the newer <code>mym2</code>. The <code>mymr</code>  script makes use of ligatures and mark positioning to support the correct rendering of Myanmar text. If the rendered inter-letter spacing within an element is non-zero, the shaping engine disables the processing and output of ligatures. This will break the rendering if Myanmar text. </p>
+
+<p>To overcome this, it is necessary to explicitly activate the ligatures for Padauk and Padauk Book for elements with non-zero spacing. The following code illustrates how to overcome this limitation:</p>
+
+<pre><code>
+html, body, * {
+    -webkit-font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
+    -ms-font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
+    -moz-font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
+    font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
+}
+</code></pre> 
 
 <!--
 
