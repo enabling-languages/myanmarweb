@@ -13,7 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>MyanmarWeb by enabling-languages</title>
+    <title>MyanmarWeb &ndash; Padauk font information</title>
   </head>
 
   <body>
@@ -28,31 +28,27 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>
-<a id="myanmar-lists-documentation" class="anchor" href="#myanmar-lists-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Myanmar script lists and generated counters</h3>
 
+<!-- START PAGE HEADING/TITLE -->
+          <h2>
+<a id="padauk_and_padauk_book" class="anchor" href="#padauk_and_padauk_book" aria-hidden="true"><span class="octicon octicon-link"></span></a>Padauk and Padauk Book</h2>
+<!-- END PAGE HEADING/TITLE -->
 
-
-
-
-
-<h2 id="padauk_and_padauk_book">Padauk and Padauk Book</h2>
-
+<!-- START UNIQUE CONTENT OF PAGE -->
 
 <p>
-<a rel="nofollow" title="http://scripts.sil.org/Padauk" class="urlextern" href="http://scripts.sil.org/Padauk">Paduak</a> and <a rel="nofollow" title="http://scripts.sil.org/Padauk" class="urlextern" href="http://scripts.sil.org/Padauk">Paduak Book</a> are TT fonts with OpenType and Graphite tables for the Myanmar script. 
+<a rel="nofollow" title="http://scripts.sil.org/Padauk" class="urlextern" href="http://scripts.sil.org/Padauk">Paduak</a> and <a rel="nofollow" title="http://scripts.sil.org/Padauk" class="urlextern" href="http://scripts.sil.org/Padauk">Paduak Book</a> are TrueType fonts with OpenType and Graphite tables for the Myanmar script. 
 </p>
 
 <p>
 These notes refer to v. 2.8
 </p>
 
-
-
 <h3 id="graphite" class="sectionedit2">Graphite</h3>
 
-
 <h4 id="graphite_features">Graphite features</h4>
+
+<p>The following <a href=" http://graphit.sil.org/">Graphite</a> features can be used to tailor the rendering of the Padauk and Padauk Book fonts. Firefox is the only browser that supports Graphite rendering.</p>
 
 <table class="inline">
   <tbody><tr class="row0">
@@ -92,41 +88,109 @@ These notes refer to v. 2.8
   </tr>
 </tbody></table>
 
-
-
 <h4 id="default_features_per_language">Default features per language</h5>
 
+<p>Padauk and Padauk Book offer language specific rendering for Sgaw Karen, Khamti Shan (Tai Khamti) and Kayah. Each language supports the following features and feature values:</p>
 
-<h5 id="s_gaw_karen_ksw">S'gaw Karen (ksw)</h5>
-
-<pre class="code">  "hsln" 1, "wtri" 1, "lldt" 1;</pre>
-
-<h5 id="khmati_kht">Khmati (kht)</h5>
-
-<pre class="code">  "kdot" 1, "fdot" 1;</pre>
-
-<h5 id="kayah_kyu">Kayah (kyu)</h5>
-
-<pre class="code">  "wtri" 1, "hsln" 2;</pre>
-
-
+<table>
+<thead>
+ 	<tr><th>Language</th><th>Langauge code</th><th>Features (and values)</th></tr>
+ </thead>
+ <tbody>
+ 	<tr><td>S'gaw Karen</td><td>ksw</td><td><code>"hsln" 1, "wtri" 1, "lldt" 1;</code></td></tr>
+ 	<tr><td>Khamti Shan</td><td>kht</td><td><code>"kdot" 1, "fdot" 1;</code></td></tr>
+ 	<tr><td>Kayah</td><td>kyu</td><td><code>"wtri" 1, "hsln" 2;</code></td></tr>
+ </tbody>
+ </table>
 
 
-
-
+<p>All other languages use the default values (0) for all the available features. But it is possible to use <code>font-feature-settings</code> to override the default font behaviors.</p>
 
 <h3 id="opentype">Opentype</h3>
 
-<p>Padauk uses the clig, kern, mark, mkmk and locl Opentype features.</p>
+<p>Padauk and Padauk Book offer language specific rendering for Sgaw Karen, Khamti Shan (Tai Khmati) and Kayah. All other languages use the default OpenType language system. The Padauk and Padauk Book OpenType tables do not contain features that allow access to specific features comparable to those available in the Graphite tables.</p>
 
-<p>It contains support the following language systems: dftl (Default), kht (Khamti Shan), ksw (Sgaw Karen), kyu (). </p>
-
+<p>It contains support the following language systems: dftl (Default), kht (Khamti Shan), ksw (Sgaw Karen), kyu (Western Kayah). </p>
 
 <h3>CSS rules</h3>
 
-<p>Firefox, with Graphite rendering enabled, will automatically use the Sgaw Karen positioning and substitution rules defined in font when the browser parses the a language tag for S'gaw Karen. Unfortunately, Firefox when using OpenType rendering will </p>
+<p>Firefox and Internet Explorer can utilise the value of the language tag in the HTML markup to enable language specific features. This will only work for Firefox with the Padauk font, when Firefox is using Graphite rendering. Internet EXplorer requires the OpenType <code>locl</code> feature to be specifically activated.</p>
+
+<h4>font-language-override</h4>
+
+<p>Firefox, when using OpenType rendering, can use localised glyph and positioning rules via the CSS <code>font-language-override</code> property. The <code>font-language-override</code> can also be used to activate a langauge system for an alternative language. For instance, Western Pwo Karen has no specific language system in teh Padauk fonts. If the web developer wishes to, it is possible to specify <code> :lang(pwo) {font-language-override: ksw;} </code> to enable S'gaw style rendering for Western Pwo Karen.</p>
+
+<p>Firefox 34 onwards, supports <code>font-language-override</code>. An experimental unprefixed implementation was available since Firefox 24. It was governed by the preference <code>layout.css.font-features.enabled</code> defaulting to true on Nightly and Aurora only.</p>
+
+<h4>font-feature-settings</h4>
+
+<p>It is possible to tailor rendering using the <code>font-feature-settings</code> CSS property in Firefox. For instance if you wish to use the alternative teardrop glyph for medial wa in Burmese, you could add a rule like <code>:lang(my) {font-feature-settings: "wtri" 1;}</code>.
+
+<p>For language specific rendering to automatically work in Internet Explorer 10 onwards, it is necessary to activate the OpenType <code>locl</code> feature using code similar to:
+
+<pre><code>
+:lang(ksw) { 
+    -ms-font-feature-settings: "locl" 1;
+    font-feature-settings: "locl" 1;
+}</code></pre>
+
+<p>Suggested CSS for Sgaw Karen, Khamti Shan and Kayah, are:</p>
+
+<pre><code>
+:lang(ksw) {
+	font-language-override: ksw;
+	-ms-font-feature-setting: "locl" 1;
+	font-feature-setting: "locl" 1;
+}
+:lang(kht) {
+	font-language-override: kht;
+	-ms-font-feature-setting: "locl" 1;
+	font-feature-setting: "locl" 1;
+}
+:lang(kyu) {
+	font-language-override: kyu;
+	-ms-font-feature-setting: "locl" 1;
+	font-feature-setting: "locl" 1;
+}
+
+</code></pre>
 
 
+<!--
+
+Chrome 16.0 with -webkit prefix
+
+ From Gecko 2.0 (Firefox 4.0) to Gecko 14.0 (Firefox 14.0) included, Gecko supported an older syntax, slightly different from the modern one: OpenType Font Feature support in Firefox 4.  Using -moz prefix
+
+  The ISO/IEC CD 14496-22 3rd edition suggests to use the ssty feature to provide glyph variants adjusted to be more suitable for use in scripts (for example primes used as superscripts). Starting with Firefox 29, this is done automatically by the MathML rendering engine. It also suggests applying the dtls feature to letters when positing mathematical accent over it, in order to get dotless forms (for example dotless i, j with a hat). Starting with Firefox 35, this is done automatically by the MathML rendering engine. You can always override via CSS the default values determined by the MathML rendering engine.
+
+  Starting with Firefox 34, the version prefixed with -moz- is only kept for backward compatibility purpose. It is controlled by the layout.css.prefixes.font-features, defaulting to true. The prefixed property will be remove in the future.
+
+  INternet Explorer 10.0
+
+  Opera 18 -o prefix
+
+  <h4>The font-synthesis CSS property controls which missing typefaces, bold or italic, may be synthesized by the browser.
+
+  Formal syntax: none | [ weight || style ]
+  initial 
+  inherit
+  none
+  weight
+  style
+  weight style
+  unset
+
+
+Firefox 34
+  [1] Experimental implementation was available since Gecko 33. It was governed by the preference layout.css.font-features.enabled defaulting to true on Nightly and Aurora only.
+
+-->
+
+
+
+
+<!-- END OF UNIQUE CONTENT  -->
 
         </section>
 
