@@ -1,3 +1,5 @@
 h1. MyanmarWeb
 
+!https://badges.gitter.im/Join%20Chat.svg(Join the chat at https://gitter.im/enabling-languages/myanmarweb)!:https://gitter.im/enabling-languages/myanmarweb?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
 http://enabling-languages.github.io/myanmarweb/
