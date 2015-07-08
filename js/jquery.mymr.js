@@ -377,7 +377,7 @@
             that.removeClass('sm parens')
             .addClass('mymr '+set.affix)
             .find('ol').attr('data-mymrol' ,'isChild')
-            .removeClass('sm parnes')
+            .removeClass('sm parens')
             .addClass('mymr '+set.affix);
           });
 
@@ -415,7 +415,7 @@
       var $this = this;
       var affix = opt.affix || set.affix, match;
       opt.type = lang;
-      if( !affix.match(/parnes|sm/) && affix.match('x') ){
+      if( !affix.match(/parens|sm/) && affix.match('x') ){
         match = affix;
         affix = "self";
       }else{
@@ -434,7 +434,7 @@
         }else{
           rootGenerate($this, opt, function(that){
             that.removeClass('sm parens')
-            .addClass(affix+ ' mymr').find('ol').removeClass('sm parnes')
+            .addClass(affix+ ' mymr').find('ol').removeClass('sm parens')
             .addClass(affix+ ' mymr');
           });
         }
@@ -463,7 +463,7 @@
     mymrSetting: function(setting){
 
       if(setting.affix){
-        if(setting.affix.match(/parnes|sm/)){
+        if(setting.affix.match(/parens|sm/)){
           set.affix = setting.affix;
         }else if(setting.affix.match(/x/)){
           var afx = setting.affix.split('x');
@@ -479,7 +479,7 @@
     },
     mymrReset: function(){
       set = {
-        affix: 'parnes',
+        affix: 'parens',
         listPreffix: '',
         listSuffix: ''
       };
