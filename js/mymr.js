@@ -317,7 +317,7 @@ var core_version = "1.0",
       var parens = "parens";
       var affix = option&&option.affix;
       if(matchOL(ol)){
-        if(affix = attr(ol, 'data-affix')){
+        if(affix == attr(ol, 'data-affix')){
           mymr.olGenerate(ol);
           parens = "self";
         }else{
