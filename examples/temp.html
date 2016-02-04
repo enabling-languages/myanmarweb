@@ -13,12 +13,12 @@
     </style>
   </head>
   <body>
-    <ol data-mymrol='kjp' start='4' id="mainlist">
+    <ol id="mainlist">
       <li>မြမြ</li>
       <li>လှလှ</li>
       <li>ထွန်းထွန်း</li>
       <li>မောင်မောင်
-        <ol data-mymrol='dig-myanmar, isRoot' reversed='reversed'>
+        <ol reversed='reversed'>
           <li>အေအေ</li>
           <li>သန်းသန်း</li>
           <li>ကျော်ကျော်
@@ -39,7 +39,7 @@
       <li>မြမြ</li>
       <li>လှလှ</li>
       <li>ထွန်းထွန်း
-        <ol type='dig-shn'>
+        <ol>
           <li>ထွန်းထွန်း</li>
           <li>မောင်မောင်</li>
           <li>အေအေ</li>
@@ -245,13 +245,21 @@
     </ol>
 
     <script type="text/javascript">
-    $.mymr();
-    $.mymrSetting({
-      affix: '-x-',
+    
+    $( document ).ready(function() {  
+      $("ol").attr('data-mymrol','dig-myanmar');
+      $("ol>li>ol").attr('data-mymrol','my');
+      $("ol>li>ol>li>ol").attr('data-mymrol','dig-myanmar');
+      $.mymr();
+      $.mymrSetting({
+        affix: 'parens',
+      });
     });
-    $('#mainlist').mymrOrderlist('dig-shn', {
-      affix: '-x='
-    });
+        
+       //data-mymrol='my'
+       //'dig-myanmar'
+    
+    
     </script>
   </body>
   </html>
